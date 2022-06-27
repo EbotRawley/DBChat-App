@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBchat</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="emojionearea-master/emojionearea-master/dist/emojionearea.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- NavBar  -->
+    <div class="nav">
+        <div class="logo">
+            <!-- DB<span>chat</span> -->
+            <a href="index.html"><img src="/images/light-logo.png" alt="logo" id="logo-img"></a>
+        </div>
+        <div class="logout">
+            <div class="theme_switch"><i class="fa-solid fa-moon" id="theme" onclick="toggleTheme()"></i></div>
+            <div class="log"> <a href="#" id="logout"><span>Logout</span></a></div>
+        </div>
+    </div>
+    <!-- NavBar End -->
+
+    <div class="dashboard">
+        <div class="user">
+            <div class="my_profile">
+                <img src="/images/pp7.avif" alt="my_profile">
+            </div>
+            <div class="profile_name">
+                <div class="username">Rawley</div>
+                <div class="usernickname">@databoy</div>
+            </div>
+        </div>
+        <div class="links">
+            <ul>
+                <li><a href="#">Feed</a></li>
+                <li><a href="#">Chat</a></li>
+                <li><a href="#">Contacts</a></li>
+                <li><a href="#">Settings</a></li>
+                <li class="search-box">
+                    <form action="#">
+                        <input type="text" name="search" id="search" placeholder="Looking for someone ?">
+                        <span class="seach-btn">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </span>
+                    </form>
+                </li>
+                <li><a href="#"><i class="fa-regular fa-bell"></i></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- body -->
+
+    <div class="cont">
+        <div class="chatbox">
+            <div class="chatsearch">
+                <form action="#">
+                    <input type="text" placeholder="Search" id="search_chat" oninput="search()">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </form>
+            </div>
+            <!-- Chat Contacts -->
+            <div class="chats" id="chats">
+                <div class="chat">
+                    <div class="profile_img">
+                        <img src="/images/pp4.jpg" alt="profile_pic">
+                    </div>
+                    <div class="chat_info">
+                        <div class="b1">
+                            <div class="name">
+                                <h4>Kelly Brown</h4>
+                            </div>
+                            <div class="time">10:46 AM</div>
+                        </div>
+                        <div class="b2">
+                            <div class="chat_msg">Love you too <i class="fa-solid fa-heart"
+                                    style="color: rgb(192, 10, 10)"></i></div>
+                            <div class="msg_count">3</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat">
+                    <div class="profile_img">
+                        <img src="/images/pp1.jpg" alt="profile_pic">
+                    </div>
+                    <div class="chat_info">
+                        <div class="b1">
+                            <div class="name">
+                                <h4>John Doe</h4>
+                            </div>
+                            <div class="time">08:46 AM</div>
+                        </div>
+                        <div class="b2">
+                            <div class="chat_msg">At what time are we going ? </div>
+                            <!-- <div class="msg_count">2</div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="chat">
+                    <div class="profile_img">
+                        <img src="/images/img1.png" alt="profile_pic">
+
+                    </div>
+                    <div class="chat_info">
+                        <div class="b1">
+                            <div class="name">
+                                <h4>Will Smith</h4>
+                            </div>
+                            <div class="time">10:46 AM</div>
+                        </div>
+                        <div class="b2">
+                            <div class="chat_msg">Hey bro, i'm interested in</div>
+                            <div class="msg_count">2</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat">
+                    <div class="profile_img">
+                        <img src="/images/pp3.jpg" alt="profile_pic">
+                    </div>
+                    <div class="chat_info">
+                        <div class="b1">
+                            <div class="name">
+                                <h4>Joe Bidden</h4>
+                            </div>
+                            <div class="time">01:03 AM</div>
+                        </div>
+                        <div class="b2">
+                            <div class="chat_msg">Hope you remember what we...</div>
+                            <div class="msg_count">4</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat">
+                    <div class="profile_img">
+                        <img src="/images/pp2.jpg" alt="profile_pic">
+                    </div>
+                    <div class="chat_info">
+                        <div class="b1">
+                            <div class="name">
+                                <h4>Adam Kotlin</h4>
+                            </div>
+                            <div class="time">10:46 AM</div>
+                        </div>
+                        <div class="b2">
+                            <div class="chat_msg"><i class="fa-solid fa-check"></i> I'll be waiting</div>
+                            <!-- <div class="msg_count">3</div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="chat">
+                    <div class="profile_img">
+                        <img src="/images/pp9.jpg" alt="profile_pic">
+                    </div>
+                    <div class="chat_info">
+                        <div class="b1">
+                            <div class="name">
+                                <h4>Kevin Hart</h4>
+                            </div>
+                            <div class="time">16:23 PM</div>
+                        </div>
+                        <div class="b2">
+                            <div class="chat_msg">
+                                <i class="fa-solid fa-check" style="color: #bc25da;"></i>
+                                Did they come ? 
+                            </div>
+                            <!-- <div class="msg_count">1</div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="chat">
+                    <div class="profile_img">
+                        <img src="/images/pp8.jpg" alt="profile_pic">
+                    </div>
+                    <div class="chat_info">
+                        <div class="b1">
+                            <div class="name">
+                                <h4>Vin Diesel</h4>
+                            </div>
+                            <div class="time">13:34 PM</div>
+                        </div>
+                        <div class="b2">
+                            <div class="chat_msg">Yeah 🤣🤣</div>
+                            <div class="msg_count">1</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat">
+                    <div class="profile_img">
+                        <img src="/images/pp10.webp" alt="profile_pic">
+                    </div>
+                    <div class="chat_info">
+                        <div class="b1">
+                            <div class="name">
+                                <h4>Quavo</h4>
+                            </div>
+                            <div class="time">6:02 AM</div>
+                        </div>
+                        <div class="b2">
+                            <div class="chat_msg">No prob 💦</div>
+                            <div class="msg_count">1</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chat_actions">
+                <div class="new_message">
+                    <a href="#"><i class="fa-solid fa-message"></i></a>
+                </div>
+                <div class="new_contact">
+                    <a href="#"><i class="fa-solid fa-user-plus"></i></a>
+                </div>
+                <div class="new_group">
+                    <a href="#"><i class="fa-solid fa-user-group"></i></a>
+                </div>
+            </div>
+            <!-- Chat Contacts End -->
+        </div>
+
+        <!-- Inbox Chat -->
+        <div class="inbox">
+            <div class="inbox_menu">
+                <div class="inbox_profile">
+                    <img src="/images/pp1.jpg" alt="profile_img">
+                </div>
+                <div class="inbox_info">
+                    <div class="inbox_name">
+                        <h4>John Doe</h4>
+                    </div>
+                    <div class="inbox_status">
+                        <span>Online</span>
+                    </div>
+                </div>
+                <div class="inbox_options">
+                    <div class="video_call">
+                        <a href="#"><i class="fa-solid fa-video"></i></a>
+                    </div>
+                    <div class="audio_call">
+                        <a href="#"><i class="fa-solid fa-phone"></i></a>
+                    </div>
+                    <div class="audio_call">
+                        <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="inbox_cont">
+                <div class="chat_cont" id="chat_cont">
+                    <div class="box sender">
+                        <div class="text">
+                            Hello, when are we going tpo meet for that project ?
+                        </div>
+                        <div class="time">12:31 AM</div>
+                    </div>
+                    <div class="box me">
+                        <div class="text">
+                            Yes
+                        </div>
+                        <div class="time">12:31 AM</div>
+                    </div>
+                    <div class="box me">
+                        <div class="text">
+                            At 9
+                        </div>
+                        <div class="time">12:31 AM</div>
+                    </div>
+                    <div class="box sender">
+                        <div class="text">
+                            Okay no problem.
+                        </div>
+                        <div class="time">12:31 AM</div>
+                    </div>
+                    <div class="box sender">
+                        <div class="text">
+                            But how are we going to do with the hall
+                        </div>
+                        <div class="time">12:31 AM</div>
+                    </div>
+                    <div class="box me">
+                        <div class="text">
+                            Idk but w'll just meet first at CRB 1
+                        </div>
+                        <div class="time">12:31 AM</div>
+                    </div>
+                    <div class="box sender">
+                        <div class="text">
+                            Alright
+                        </div>
+                        <div class="time">12:31 AM</div>
+                    </div>
+                    <div class="box sender">
+                        <div class="text">
+                            Okay no problem.
+                        </div>
+                        <div class="time">12:31 AM</div>
+                    </div>
+                </div>
+            </div>
+            <div class="message_input">
+                <!-- <span class="emojis" id="emojis"><i class="fa-regular fa-face-smile"></i></span> -->
+                <input type="text" placeholder="Type a message" id="msg">
+                <div class="send"><button type="submit" onclick="send_msg()"><i
+                            class="fa-solid fa-paper-plane"></i></button></div>
+            </div>
+        </div>
+        <!-- Inbox Chat -->
+    </div>
+    <!-- NavBar End -->
+
+</body>
+<script src="emojionearea-master/emojionearea-master/dist/emojionearea.min.js"></script>
+<script src="https://kit.fontawesome.com/b80f0aea8d.js" crossorigin="anonymous"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#msg").emojioneArea({
+            placeholder: null
+        });
+    });
+</script>
+<script src="script.js"></script>
+
+</html>
